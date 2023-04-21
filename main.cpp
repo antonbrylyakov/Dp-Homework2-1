@@ -11,33 +11,29 @@
 int main()
 {
 	{
-		auto text_block = new Paragraph(new Text());
-		text_block->render("Hello world");
-		delete text_block;
+		auto text_block = Paragraph(std::make_shared<Text>());
+		text_block.render("Hello world");
 	}
 
 	std::cout << std::endl;
 
 	{
-		auto text_block = new Reversed(new Text());
-		text_block->render("Hello world");
-		delete text_block;
+		auto text_block = Reversed(std::make_shared<Text>());
+		text_block.render("Hello world");
 	}
 
 	std::cout << std::endl;
 
 	{
-		auto text_block = new Link(new Text());
-		text_block->render("netology.ru", "Hello world");
-		delete text_block;
+		auto text_block = Link(std::make_shared<Text>());
+		text_block.render("netology.ru", "Hello world");
 	}
 
 	std::cout << std::endl;
 
 	{
-		auto text_block = new Paragraph(new Link(new Text()));
-		text_block->render("Hello world");
-		delete text_block;
+		auto text_block = Paragraph(std::make_shared<Link>(std::make_shared<Text>()));
+		text_block.render("Hello world");
 	}
 
 	std::cout << std::endl;

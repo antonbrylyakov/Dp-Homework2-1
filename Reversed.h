@@ -5,7 +5,7 @@
 class Reversed : public Text
 {
 public:
-	Reversed(Text*&& text);
+	// Декоратор не владеет объектом "единолично". Используем shared_ptr
 	Reversed(const std::shared_ptr<Text>& text);
 	Reversed(std::shared_ptr<Text>&& text);
 	virtual void render(const std::string& data) const override;

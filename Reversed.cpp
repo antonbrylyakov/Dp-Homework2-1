@@ -2,10 +2,6 @@
 #include <algorithm>
 #include "Reversed.h"
 
-Reversed::Reversed(Text*&& text): m_text(std::move(text))
-{
-}
-
 Reversed::Reversed(const std::shared_ptr<Text>& text): m_text(text)
 {
 }

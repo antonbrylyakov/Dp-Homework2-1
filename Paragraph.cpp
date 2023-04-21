@@ -1,10 +1,6 @@
 ﻿#include <iostream>
 #include "Paragraph.h"
 
-Paragraph::Paragraph(Text*&& text): m_text(std::move(text))
-{
-}
-
 Paragraph::Paragraph(const std::shared_ptr<Text>& text): m_text(text)
 {
 }

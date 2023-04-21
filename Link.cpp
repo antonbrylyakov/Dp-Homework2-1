@@ -2,10 +2,6 @@
 #include <algorithm>
 #include "Link.h"
 
-Link::Link(Text*&& text): m_text(std::move(text))
-{
-}
-
 Link::Link(const std::shared_ptr<Text>& text): m_text(text)
 {
 }

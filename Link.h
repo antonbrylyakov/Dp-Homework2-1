@@ -5,7 +5,6 @@
 class Link : public Text
 {
 public:
-	Link(Text*&& text);
 	Link(const std::shared_ptr<Text>& text);
 	Link(std::shared_ptr<Text>&& text);
 	virtual void render(const std::string& data) const override;
